@@ -15,7 +15,7 @@ help:
     @echo "Example: just plan dev"
 
 init env="dev":
-    export AWS_PROFILE='taa-{{env}}' && \
+    export AWS_PROFILE='profile-{{env}}' && \
     terraform init -reconfigure -backend-config="backend-configs/backend.{{env}}.conf"
 
 # Plan changes for specified environment
